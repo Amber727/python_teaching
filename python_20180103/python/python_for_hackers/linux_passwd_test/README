@@ -1,0 +1,16 @@
+# python 实现linux系统弱口令检测
+#
+# 版本：      V 0.0.1
+# 作者：      Amber
+# 最后更新：  2017-12-25
+#
+
+赋予主程序linux_passwd_test.py可执行权限
+    # chmod +x linux_passwd_test.py
+
+例如：
+默认测试本机/etc/shadow
+    # ./linux_passwd_test.py 
+
+若测试其他文件
+    # ./linux_passwd_test.py shadow.txt
