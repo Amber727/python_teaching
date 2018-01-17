@@ -19,9 +19,9 @@ BODY =  string.join((
 
 PASSWORD = getpass.getpass("邮箱密码：")
 
-server = smtplib.SMTP()
-server.connect(HOST, '25')
-server.starttls()
+server = smtplib.SMTP()     #创建一个SMTP对象
+server.connect(HOST, '25')  #连接SMTP服务器
+server.starttls()   #启用TLS安全传输模式，说有SMTP指令都将加密传输
 server.login(FROM, PASSWORD)
-server.sendmail(FROM, TO, BODY)
-server.quit()
+server.sendmail(FROM, TO, BODY)     #发送邮件，参数依次为：发件人、收件人、邮件内容
+server.quit()   #断开smtp服务器的连接
